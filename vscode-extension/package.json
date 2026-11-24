@@ -1,0 +1,63 @@
+{
+    "name": "frameworksync-vscode",
+    "displayName": "FrameworkSync",
+    "description": "FrameworkSync migration suggestions and code actions.",
+    "version": "0.2.1",
+    "publisher": "purvaja-kartikeya",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "main": "./extension.js",
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "frameworksync.refresh",
+                "title": "FrameworkSync: Refresh"
+            },
+            {
+                "command": "frameworksync.applySuggestion",
+                "title": "FrameworkSync: Apply Migration"
+            },
+            {
+                "command": "frameworksync.showLog",
+                "title": "FrameworkSync: Show log"
+            },
+            {
+                "command": "frameworksync.restartWatcher",
+                "title": "FrameworkSync: Restart watcher"
+            },
+            {
+                "command": "frameworksync.revertMigration",
+                "title": "FrameworkSync: Undo migration (restore git checkpoint)"
+            }
+        ],
+        "configuration": {
+            "title": "FrameworkSync",
+            "properties": {
+                "frameworksync.resultsPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Path to FrameworkSync data/vscode_results.json."
+                },
+                "frameworksync.projectRoot": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Folder of the FrameworkSync project (contains pyproject.toml and src/frameworksync). Leave empty when that folder is the open workspace."
+                },
+                "frameworksync.requireGitCheckpoint": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Before any migration (automatic or manual), require the file to be committed in git so the migration can be undone."
+                }
+            }
+        }
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Purvaja11/frameworksync.git"
+    }
+}

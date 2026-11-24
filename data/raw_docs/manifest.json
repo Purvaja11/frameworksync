@@ -1,0 +1,44 @@
+{
+  "langchain-v1-migration": {
+    "library": "langchain",
+    "url": "https://docs.langchain.com/oss/python/migrate/langchain-v1.md",
+    "hash": "b72066c3e2a9",
+    "path": "langchain\\langchain-v1-migration.md",
+    "fetched_at": "2026-09-29T08:13:47.878258+00:00"
+  },
+  "langgraph-v1-migration": {
+    "library": "langgraph",
+    "url": "https://docs.langchain.com/oss/python/migrate/langgraph-v1.md",
+    "hash": "8c87eabfc1d4",
+    "path": "langgraph\\langgraph-v1-migration.md",
+    "fetched_at": "2026-09-29T08:13:48.738295+00:00"
+  },
+  "llamaindex-deprecated-terms": {
+    "library": "llamaindex",
+    "url": "https://developers.llamaindex.ai/python/framework/changes/deprecated_terms/index.md",
+    "hash": "a5a77b726aae",
+    "path": "llamaindex\\llamaindex-deprecated-terms.md",
+    "fetched_at": "2026-09-29T08:13:49.055376+00:00"
+  },
+  "llamaindex-settings-migration": {
+    "library": "llamaindex",
+    "url": "https://developers.llamaindex.ai/python/framework/module_guides/supporting_modules/service_context_migration/index.md",
+    "hash": "9ab5ba2a9599",
+    "path": "llamaindex\\llamaindex-settings-migration.md",
+    "fetched_at": "2026-09-29T08:13:49.345333+00:00"
+  },
+  "langchain-changelog": {
+    "library": "langchain",
+    "url": "https://docs.langchain.com/oss/python/releases/changelog.md",
+    "hash": "3139d510e19f",
+    "path": "langchain\\langchain-changelog.md",
+    "fetched_at": "2026-09-29T08:13:50.091148+00:00"
+  },
+  "llamaindex-changelog": {
+    "library": "llamaindex",
+    "url": "https://developers.llamaindex.ai/python/framework/changelog/index.md",
+    "hash": "14ac904a737a",
+    "path": "llamaindex\\llamaindex-changelog.md",
+    "fetched_at": "2026-09-29T08:13:51.247174+00:00"
+  }
+}

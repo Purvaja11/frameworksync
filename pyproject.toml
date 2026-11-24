@@ -1,0 +1,39 @@
+[project]
+name = "frameworksync"
+version = "0.1.0"
+description = "Detects legacy LangChain, LangGraph and LlamaIndex code and migrates it: auto-fixes, guided steps, VS Code extension, local LLM."
+readme = "README.md"
+authors = [
+    { name = "Purvaja Kalbande", email = "purvajakalb09@gmail.com" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["langchain", "langgraph", "llamaindex", "migration", "vscode", "rag", "ollama"]
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.5.9",
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "langchain-core>=1.6.4",
+    "langchain-ollama>=1.1.0",
+    "langchain-text-splitters>=1.1.2",
+    "sentence-transformers>=6.1.0",
+    "uvicorn[standard]>=0.53.0",
+    "watchdog>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Purvaja11/frameworksync"
+Repository = "https://github.com/Purvaja11/frameworksync"
+
+[project.scripts]
+frameworksync = "frameworksync:main"
+
+[build-system]
+requires = ["uv_build>=0.12.8,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

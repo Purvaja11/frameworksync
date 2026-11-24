@@ -1,0 +1,32 @@
+# Python / uv
+__pycache__/
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# Generated at runtime (rebuild with `frameworksync ingest`, etc.)
+data/chroma_db/
+data/vscode_results.json
+data/watcher.lock
+data/explanation_cache.json
+watcher_log.txt
+
+# VS Code extension build output (rebuild with `npx @vscode/vsce package`)
+node_modules/
+*.vsix
+
+# Secrets and local config
+.env
+.env.*
+
+# Editors / OS
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backup of the old local git history (see GitHub instructions)
+.git_backup/

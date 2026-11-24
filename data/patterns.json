@@ -1,0 +1,121 @@
+[
+  {
+    "old_pattern": "MultiServerMCPClient",
+    "new_pattern": "MCPAdapter",
+    "reason": "replaced by",
+    "library": "langchain",
+    "source_name": "langchain-changelog"
+  },
+  {
+    "old_pattern": "create_react_agent",
+    "new_pattern": "create_agent",
+    "reason": "arrow",
+    "library": "langchain",
+    "source_name": "langchain-v1-migration"
+  },
+  {
+    "old_pattern": "create_react_agent",
+    "new_pattern": "create_agent",
+    "reason": "arrow",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "AgentState",
+    "new_pattern": "langchain.agents.AgentState",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "AgentStatePydantic",
+    "new_pattern": "langchain.agents.AgentState",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "AgentStateWithStructuredResponse",
+    "new_pattern": "langchain.agents.AgentState",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "AgentStateWithStructuredResponsePydantic",
+    "new_pattern": "langchain.agents.AgentState",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "HumanInterruptConfig",
+    "new_pattern": "langchain.agents.middleware.human_in_the_loop.InterruptOnConfig",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "ActionRequest",
+    "new_pattern": "langchain.agents.middleware.human_in_the_loop.InterruptOnConfig",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "HumanInterrupt",
+    "new_pattern": "langchain.agents.middleware.human_in_the_loop.HITLRequest",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "MessageGraph",
+    "new_pattern": "StateGraph",
+    "reason": "deprecation table",
+    "library": "langgraph",
+    "source_name": "langgraph-v1-migration"
+  },
+  {
+    "old_pattern": "ResponseEvaluator",
+    "new_pattern": "FaithfulnessEvaluator",
+    "reason": "arrow",
+    "library": "llamaindex",
+    "source_name": "llamaindex-changelog"
+  },
+  {
+    "old_pattern": "QueryResponseEvaluator",
+    "new_pattern": "RelevancyEvaluator",
+    "reason": "arrow",
+    "library": "llamaindex",
+    "source_name": "llamaindex-changelog"
+  },
+  {
+    "old_pattern": "GPTSimpleVectorIndex",
+    "new_pattern": "VectorStoreIndex",
+    "reason": "renamed",
+    "library": "llamaindex",
+    "source_name": "llamaindex-deprecated-terms"
+  },
+  {
+    "old_pattern": "GPTVectorStoreIndex",
+    "new_pattern": "VectorStoreIndex",
+    "reason": "renamed",
+    "library": "llamaindex",
+    "source_name": "llamaindex-deprecated-terms"
+  },
+  {
+    "old_pattern": "PromptHelper",
+    "new_pattern": "context_window",
+    "reason": "replaced by",
+    "library": "llamaindex",
+    "source_name": "llamaindex-deprecated-terms"
+  },
+  {
+    "old_pattern": "ServiceContext",
+    "new_pattern": "Settings",
+    "reason": "deprecated in favor of",
+    "library": "llamaindex",
+    "source_name": "llamaindex-deprecated-terms"
+  }
+]
