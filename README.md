@@ -40,25 +40,26 @@ with its replacement.
 ## How it works
 
 ```mermaid
-flowchart LR
-    subgraph Offline["Build the knowledge (run once)"]
-        D[Official migration docs] -->|scrape| R[data/raw_docs]
-        R -->|regex extractor| P[data/patterns.json]
-        R -->|chunk + embed| C[(ChromaDB)]
+flowchart TD
+    subgraph Offline["1. Build the knowledge (run once)"]
+        D["Official migration docs"] --> R["data/raw_docs"]
+        R --> P["data/patterns.json<br/>(regex extractor)"]
+        R --> C[("ChromaDB<br/>chunk + embed")]
     end
-    subgraph Live["On every save"]
-        F[.py file saved] --> W[watchdog watcher<br/>debounced]
-        W --> A[AST parser]
-        A --> DET[Pattern detector<br/>+ structural signals]
-        P --> DET
-        DET --> S[Suggestion engine<br/>proposal + manual steps]
-        S -->|instant| B[vscode_results.json<br/>+ WebSocket]
-        S -.->|background| L[Local LLM<br/>qwen2.5:3b via Ollama]
-        C --> L
-        L -.->|cached explanation| B
+
+    subgraph Live["2. On every save"]
+        F[".py file saved"] --> W["Watcher<br/>(debounced)"]
+        W --> A["AST parser"]
+        A --> DET["Pattern detector<br/>+ structural signals"]
+        DET --> S["Suggestion engine<br/>(fix or guided steps)"]
+        S --> B["Results JSON<br/>+ WebSocket"]
+        S -.-> L["Local LLM explains<br/>(qwen2.5:3b via Ollama)"]
+        L -.-> B
     end
-    B --> X[VS Code extension<br/>squiggles, hover, Quick Fix]
-    B --> U[Web UI]
+
+    P --> DET
+    C --> L
+    B --> X["VS Code extension<br/>and Web UI"]
 ```
 
 Design choices worth knowing:
